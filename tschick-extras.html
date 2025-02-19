@@ -106,14 +106,10 @@
 
         <!-- Навигация по страницам -->
         <div class="page-navigation">
-            <a href="tschick-details.html" class="prev-page">
-                <span class="arrow">←</span>
-                Zurück zu Seite 2
-            </a>
             <div class="current-page">Seite 3</div>
-            <a href="goodbye-berlin.html" class="home-button">
-                Zur Startseite
-                <i class="fas fa-home"></i>
+            <a href="goodbye-berlin.html" class="next-page">
+                Zurück zur Startseite
+                <span class="arrow">→</span>
             </a>
         </div>
 
@@ -149,18 +145,15 @@
             background: #f8f9fa;
             border-radius: 8px;
             text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1em;
         }
 
         .current-page {
             color: #6c757d;
             font-size: 0.9em;
+            margin-bottom: 1em;
         }
 
-        .next-page, .prev-page, .home-button {
+        .next-page {
             display: inline-block;
             padding: 1em 2em;
             background: #3498db;
@@ -170,31 +163,14 @@
             transition: all 0.3s ease;
         }
 
-        .prev-page {
-            background: #2ecc71;
-        }
-
-        .home-button {
-            background: #e74c3c;
-        }
-
-        .next-page:hover, .prev-page:hover, .home-button:hover {
-            transform: translateX(0);
-            opacity: 0.9;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-
         .next-page:hover {
+            background: #2980b9;
             transform: translateX(5px);
-        }
-
-        .prev-page:hover {
-            transform: translateX(-5px);
         }
 
         .arrow {
             display: inline-block;
-            margin: 0 8px;
+            margin-left: 8px;
             transition: transform 0.3s ease;
         }
 
@@ -202,20 +178,15 @@
             transform: translateX(5px);
         }
 
-        .prev-page:hover .arrow {
-            transform: translateX(-5px);
-        }
-
         @media (max-width: 768px) {
             .page-navigation {
-                flex-direction: column;
                 padding: 1.5em;
+                margin-top: 3em;
             }
 
-            .next-page, .prev-page, .home-button {
-                width: 100%;
-                margin: 0.5em 0;
-                text-align: center;
+            .next-page {
+                padding: 0.8em 1.5em;
+                font-size: 0.9em;
             }
         }
     </style>
